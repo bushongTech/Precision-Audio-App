@@ -1,8 +1,8 @@
-/* Body and Container Styles */
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #121212; /* Dark background */
-  color: #ffffff; /* Light text for contrast */
+  background-color: #121212; /* Dark mode background */
+  color: #ffffff;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,41 +11,55 @@ body {
   height: 100vh;
 }
 
-.container {
+.app-title {
+  position: absolute; /* Allow positioning at the top */
+  top: 20px; /* Place it at the top of the screen */
+  left: 50%; /* Horizontally center */
+  transform: translateX(-50%); /* Adjust for perfect centering */
   text-align: center;
-  background: #1e1e1e; /* Slightly lighter than the background for contrast */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+  font-size: 28px;
+  color: #bb86fc; /* Accent color */
+  font-weight: bold;
 }
 
-/* Typography Styles */
+
+.container {
+  text-align: center;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 90%; /* Make container adapt to smaller screens */
+  max-width: 400px; /* Ensure it doesn't get too wide on larger screens */
+}
+
+/* Typography */
 .title {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #bb86fc; /* Accent color for title */
+  color: #bb86fc;
 }
 
-/* Input Field Styles */
+/* Input Field */
 .input {
-  width: 80%;
-  padding: 10px;
+  width: 100%; /* Full width for smaller screens */
+  padding: 10px; /* Consistent padding on all sides */
   margin-bottom: 20px;
   border: 1px solid #333333;
   border-radius: 4px;
-  background-color: #292929; /* Darker input background */
+  background-color: #292929;
   color: #ffffff;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
-/* Placeholder Text Styling */
 .input::placeholder {
-  color: #888888; /* Subdued color for placeholder text */
+  color: #888888;
 }
 
-/* Button Styles */
+/* Button */
 .button {
   padding: 10px 20px;
-  background-color: #6200ee; /* Accent color for the button */
+  background-color: #6200ee;
   color: white;
   border: none;
   border-radius: 4px;
@@ -55,5 +69,26 @@ body {
 }
 
 .button:hover {
-  background-color: #3700b3; /* Darker hover color for the button */
+  background-color: #3700b3;
+}
+
+.button:active {
+  background-color: #4a00cc;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px; /* Adjust font size for small screens */
+  }
+
+  .input {
+    padding: 8px; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .button {
+    font-size: 14px; /* Smaller button text */
+    padding: 8px 16px; /* Smaller button size */
+  }
 }
