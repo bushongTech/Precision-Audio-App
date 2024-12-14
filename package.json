@@ -1,0 +1,17 @@
+{
+  "name": "precision-audio-app",
+  "version": "1.0.0",
+  "description": "Set the volume to a specific percentage",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
